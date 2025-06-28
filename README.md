@@ -6,7 +6,7 @@ You can add, edit, delete, and mark tasks as done. The app supports filtering an
 ## Live Demo
 
 Check out the live version of this app on GitHub Pages:  
-[https://your-username.github.io/your-repo-name](https://your-username.github.io/your-repo-name)
+https://delalius.github.io/todo-app/
 
 ## Features
 
