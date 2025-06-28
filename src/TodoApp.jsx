@@ -39,52 +39,53 @@ export default function TodoApp() {
           className={filter === "all" ? "active" : ""}
           onClick={() => setFilter("all")}
         >
-          Все задачи
+          All Tasks
         </button>
         <button
           className={filter === "active" ? "active" : ""}
           onClick={() => setFilter("active")}
         >
-          В прогрессе
+          In Progress
         </button>
         <button
           className={filter === "done" ? "active" : ""}
           onClick={() => setFilter("done")}
         >
-          Выполненные
+          Completed
         </button>
       </div>
 
       <div className={`main ${theme}`}>
         <div className="main-header">
           <label className="hamburger">
-  <input 
-    type="checkbox" 
-    checked={menuOpen} 
-    onChange={() => setMenuOpen(!menuOpen)} 
-  />
-  <svg viewBox="0 0 32 32" >
-    <path className="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-    <path className="line" d="M7 16 27 16"></path>
-  </svg>
-</label>
+            <input 
+              type="checkbox" 
+              checked={menuOpen} 
+              onChange={() => setMenuOpen(!menuOpen)} 
+            />
+            <svg viewBox="0 0 32 32" >
+              <path className="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path className="line" d="M7 16 27 16"></path>
+            </svg>
+          </label>
 
           <h3>
             TodoApp {`>`}{" "}
             {filter === "all"
-              ? "Все задачи"
+              ? "All Tasks"
               : filter === "active"
-              ? "В прогрессе"
-              : "Выполненные"}
+              ? "In Progress"
+              : "Completed"}
           </h3>
-          
         </div>
-<button onClick={() => setShowForm(!showForm)}>
-            Добавить задачу ➕
-          </button>
+
+        <button onClick={() => setShowForm(!showForm)}>
+          Add Task ➕
+        </button>
+
         <div className="task-stats">
-          📋 Всего: {tasks.length} | ✅ Выполнено:{" "}
-          {tasks.filter((t) => t.done).length} | 🟡 В прогрессе:{" "}
+          📋 Total: {tasks.length} | ✅ Completed:{" "}
+          {tasks.filter((t) => t.done).length} | 🟡 In Progress:{" "}
           {tasks.filter((t) => !t.done).length}
         </div>
 
@@ -111,12 +112,12 @@ export default function TodoApp() {
           <div className="input-section">
             <input
               type="text"
-              placeholder="Заголовок"
+              placeholder="Title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <textarea
-              placeholder="Детали"
+              placeholder="Details"
               value={details}
               onChange={(e) => setDetails(e.target.value)}
             />
@@ -126,7 +127,7 @@ export default function TodoApp() {
                 setShowForm(false);
               }}
             >
-              Сохранить
+              Save
             </button>
           </div>
         )}
@@ -136,19 +137,19 @@ export default function TodoApp() {
             className={sort === "newest" ? "selected" : ""}
             onClick={() => setSort("newest")}
           >
-            Новые
+            Newest
           </button>
           <button
             className={sort === "oldest" ? "selected" : ""}
             onClick={() => setSort("oldest")}
           >
-            Старые
+            Oldest
           </button>
           <button
             className={sort === "activeFirst" ? "selected" : ""}
             onClick={() => setSort("activeFirst")}
           >
-            Сначала активные
+            Active First
           </button>
         </div>
 
@@ -195,7 +196,7 @@ export default function TodoApp() {
                           setActiveMenuIndex(null);
                         }}
                       >
-                        Редактировать
+                        Edit
                       </button>
                       <button
                         onClick={() => {
@@ -203,7 +204,7 @@ export default function TodoApp() {
                           setActiveMenuIndex(null);
                         }}
                       >
-                        Удалить
+                        Delete
                       </button>
                     </div>
                   )}
