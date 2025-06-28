@@ -19,7 +19,7 @@ https://delalius.github.io/todo-app/
 ## How to run locally
 
 1. Clone the repo:  
-   `git clone https://github.com/your-username/your-repo-name.git`
+   `git clone https://github.com/Delalius/todo-app.git`
 
 2. Install dependencies:  
    `npm install`
